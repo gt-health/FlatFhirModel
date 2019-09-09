@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.gatech</groupId>
-  <artifactId>FlatFhirModel</artifactId>
+  <artifactId>IGCompassModel</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>FlatFhirModel</name>
+  <name>IGCompassModel</name>
   <description>Modelling package to work against a FlatFhir format, with a utility mapper package to map VRDR IG resources</description>
   <properties>
   	<jackson.version>2.10.0.pr2</jackson.version>
