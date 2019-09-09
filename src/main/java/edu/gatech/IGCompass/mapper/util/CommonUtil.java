@@ -1,21 +1,16 @@
-package edu.gatech.IGFlatFhir.mapper.util;
+package edu.gatech.IGCompass.mapper.util;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
+import edu.gatech.IGCompass.exception.MissingDataNodeException;
+import edu.gatech.IGCompass.exception.MissingKeyException;
+import edu.gatech.IGCompass.exception.PathFormatException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
+import edu.gatech.IGCompass.model.IGMapDocument;
 
 public class CommonUtil {
 	public static String findValueFromIGKey(IGMapDocument document,String resourcePath) {

@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.exception;
+package edu.gatech.IGCompass.exception;
 
 public class WrongTypeException extends Exception{
 	public WrongTypeException(String attribute, String foundType, String... expectedTypes) {

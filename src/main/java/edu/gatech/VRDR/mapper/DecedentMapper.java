@@ -2,25 +2,19 @@ package edu.gatech.VRDR.mapper;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.Date;
 
 import org.hl7.fhir.dstu3.model.Address;
 import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.DateTimeType;
-import org.hl7.fhir.dstu3.model.HumanName;
-import org.hl7.fhir.dstu3.model.Quantity;
 import org.hl7.fhir.dstu3.model.Enumerations.AdministrativeGender;
+import org.hl7.fhir.dstu3.model.HumanName;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingInformationException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
+import edu.gatech.IGCompass.exception.MissingDataNodeException;
+import edu.gatech.IGCompass.exception.MissingInformationException;
+import edu.gatech.IGCompass.exception.PathFormatException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.Decedent;
-import edu.gatech.VRDR.model.DecedentAge;
 
 public class DecedentMapper implements IGMapper<Decedent> {
 

@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.exception;
+package edu.gatech.IGCompass.exception;
 
 public class MissingKeyException extends Exception{
 	public MissingKeyException(String keyname) {

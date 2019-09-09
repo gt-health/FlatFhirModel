@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.model;
+package edu.gatech.IGCompass.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,11 +11,11 @@ import org.hl7.fhir.dstu3.model.CodeableConcept;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.exception.MissingDataNodeException;
+import edu.gatech.IGCompass.exception.MissingKeyException;
+import edu.gatech.IGCompass.exception.PathFormatException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
 
 public class IGMapDocument implements Serializable{
 	private Info info;

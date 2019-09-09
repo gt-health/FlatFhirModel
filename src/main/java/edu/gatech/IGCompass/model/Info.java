@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.model;
+package edu.gatech.IGCompass.model;
 
 import java.io.Serializable;
 import java.util.Iterator;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
+import edu.gatech.IGCompass.exception.MissingKeyException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
 
 public class Info implements Serializable{
 	private String local_dataset;

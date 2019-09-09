@@ -6,13 +6,12 @@ import org.hl7.fhir.dstu3.model.HumanName;
 import org.hl7.fhir.dstu3.model.Identifier;
 import org.hl7.fhir.dstu3.model.Practitioner.PractitionerQualificationComponent;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingInformationException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
+import edu.gatech.IGCompass.exception.MissingDataNodeException;
+import edu.gatech.IGCompass.exception.MissingInformationException;
+import edu.gatech.IGCompass.exception.PathFormatException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.Certifier;
 
 public class CertifierMapper implements IGMapper<Certifier> {

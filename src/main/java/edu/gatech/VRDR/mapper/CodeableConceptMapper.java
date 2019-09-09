@@ -1,15 +1,12 @@
 package edu.gatech.VRDR.mapper;
 
 import org.hl7.fhir.dstu3.model.CodeableConcept;
-import org.hl7.fhir.dstu3.model.Coding;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
-import edu.gatech.VRDR.model.AutopsyPerformedIndicator;
+import edu.gatech.IGCompass.exception.MissingDataNodeException;
+import edu.gatech.IGCompass.exception.PathFormatException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.model.IGMapDocument;
 
 public class CodeableConceptMapper implements IGMapper<CodeableConcept>{
 	public CodeableConcept map(IGMapDocument document,String resourceRootPath) throws WrongTypeException, MissingDataNodeException, PathFormatException{

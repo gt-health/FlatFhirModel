@@ -1,20 +1,16 @@
-package edu.gatech.IGFlatFhir.model;
+package edu.gatech.IGCompass.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-
-import org.hl7.fhir.dstu3.model.CodeableConcept;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
+import edu.gatech.IGCompass.exception.MissingKeyException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
 
 public class ListProfileEntry extends ProfileEntry implements Serializable{
 

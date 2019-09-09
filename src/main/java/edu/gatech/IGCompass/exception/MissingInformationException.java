@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.exception;
+package edu.gatech.IGCompass.exception;
 
 //TODO: Figure out a good error message here.
 public class MissingInformationException extends Exception{

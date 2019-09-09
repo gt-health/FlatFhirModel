@@ -6,13 +6,8 @@ import org.hl7.fhir.dstu3.model.Address;
 import org.hl7.fhir.dstu3.model.Address.AddressType;
 import org.hl7.fhir.dstu3.model.Address.AddressUse;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingInformationException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.model.IGMapDocument;
 
 public class AddressMapper implements IGMapper<Address>{
 

@@ -3,13 +3,9 @@ package edu.gatech.VRDR.mapper;
 import org.hl7.fhir.dstu3.model.DateTimeType;
 import org.hl7.fhir.dstu3.model.Quantity;
 
-import edu.gatech.IGFlatFhir.exception.MissingDataNodeException;
-import edu.gatech.IGFlatFhir.exception.MissingInformationException;
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.PathFormatException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
-import edu.gatech.IGFlatFhir.mapper.util.CommonUtil;
-import edu.gatech.IGFlatFhir.model.IGMapDocument;
+import edu.gatech.IGCompass.exception.MissingInformationException;
+import edu.gatech.IGCompass.mapper.util.CommonUtil;
+import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.DecedentAge;
 
 public class DecedentAgeMapper implements IGMapper<DecedentAge>{

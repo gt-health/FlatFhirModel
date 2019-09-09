@@ -1,4 +1,4 @@
-package edu.gatech.IGFlatFhir.model;
+package edu.gatech.IGCompass.model;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -9,8 +9,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
 
-import edu.gatech.IGFlatFhir.exception.MissingKeyException;
-import edu.gatech.IGFlatFhir.exception.WrongTypeException;
+import edu.gatech.IGCompass.exception.MissingKeyException;
+import edu.gatech.IGCompass.exception.WrongTypeException;
 
 public class Profiles implements Serializable{
 	Map<String,ProfileEntry> entries;
