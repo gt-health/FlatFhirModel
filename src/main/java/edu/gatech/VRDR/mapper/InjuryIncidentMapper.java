@@ -1,6 +1,7 @@
 package edu.gatech.VRDR.mapper;
 
 import org.hl7.fhir.dstu3.model.CodeableConcept;
+import org.hl7.fhir.dstu3.model.DateTimeType;
 import org.hl7.fhir.dstu3.model.StringType;
 
 import edu.gatech.IGCompass.exception.MissingDataNodeException;
@@ -29,6 +30,9 @@ public class InjuryIncidentMapper implements IGMapper<InjuryIncident> {
 		component3CC = ccMapper.map(document, "Injury Incident.component3.valueCodeableConcept");
 		if(value == null) {
 			throw new MissingInformationException("Injury Incident.valueString");
+		}
+		if(effectiveDateTime != null) {
+			resource.setEffective(new DateTimeType(effectiveDateTime));
 		}
 		resource.setValue(new StringType(value));
 		if(component1 == null) {
