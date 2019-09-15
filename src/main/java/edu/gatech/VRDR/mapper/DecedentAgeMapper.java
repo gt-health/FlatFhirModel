@@ -18,8 +18,14 @@ public class DecedentAgeMapper implements IGMapper<DecedentAge>{
 		value = CommonUtil.findValueFromIGKey(document,"Decedent Age.valueQuantity.value");
 		unit = CommonUtil.findValueFromIGKey(document,"Decedent Age.valueQuantity.unit");
 		effectiveDateTime = CommonUtil.findValueFromIGKey(document,"Decedent Age.valueQuantity");
-		if((value == null || unit == null) && effectiveDateTime == null) {
-			throw new MissingInformationException("Some error message here"); //TODO; get this error message right
+		if(value == null) {
+			throw new MissingInformationException("Decedent Age.valueQuantity.value"); //TODO; get this error message right
+		}
+		if(unit == null) {
+			throw new MissingInformationException("Decedent Age.valueQuantity.unit"); //TODO; get this error message right
+		}
+		if(effectiveDateTime == null) {
+			
 		}
 		if(value != null && unit != null) {
 			resource.setValue(new Quantity().setValue(Double.valueOf(value)).setUnit(unit));

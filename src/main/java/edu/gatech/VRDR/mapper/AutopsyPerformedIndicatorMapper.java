@@ -12,16 +12,19 @@ public class AutopsyPerformedIndicatorMapper implements IGMapper<AutopsyPerforme
 
 	@Override
 	public AutopsyPerformedIndicator map(IGMapDocument document,String resourceRootPath) {
-		CodeableConcept concept = null;
+		CodeableConcept autopsyPerformedConcept = null;
+		CodeableConcept resultsAvailableConcept = null;
 		CodeableConceptMapper ccMapper = new CodeableConceptMapper();
+		
 		try {
-			concept = ccMapper.map(document,"Autopsy Performed Indicator.valueCodeableConcept");
+			autopsyPerformedConcept = ccMapper.map(document,"Autopsy Performed Indicator.valueCodeableConcept");
+			resultsAvailableConcept = ccMapper.map(document,"Autopsy Performed Indicator.component.valueCodeableConcept");
 		} catch (WrongTypeException | MissingDataNodeException | PathFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(concept != null) {
-			return new AutopsyPerformedIndicator(concept);
+		if(autopsyPerformedConcept != null && resultsAvailableConcept != null) {
+			return new AutopsyPerformedIndicator(autopsyPerformedConcept,resultsAvailableConcept);
 		}
 		return null;
 	}
