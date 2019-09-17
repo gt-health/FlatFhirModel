@@ -13,6 +13,10 @@ import edu.gatech.IGCompass.exception.WrongTypeException;
 import edu.gatech.IGCompass.mapper.util.CommonUtil;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.Certifier;
+import edu.gatech.common.mapper.AddressMapper;
+import edu.gatech.common.mapper.CodeableConceptMapper;
+import edu.gatech.common.mapper.HumanNameMapper;
+import edu.gatech.common.mapper.IGMapper;
 
 public class CertifierMapper implements IGMapper<Certifier> {
 	@Override

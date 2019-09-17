@@ -10,8 +10,10 @@ import edu.gatech.IGCompass.exception.PathFormatException;
 import edu.gatech.IGCompass.exception.WrongTypeException;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.CauseOfDeathCondition;
+import edu.gatech.common.mapper.CodeableConceptMapper;
+import edu.gatech.common.mapper.IGMapper;
 
-public class CauseOfDeathMapper implements IGMapper<CauseOfDeathCondition> {
+public class CauseOfDeathConditionMapper implements IGMapper<CauseOfDeathCondition> {
 
 	@Override
 	public CauseOfDeathCondition map(IGMapDocument document,String resourceRootPath) throws MissingInformationException {

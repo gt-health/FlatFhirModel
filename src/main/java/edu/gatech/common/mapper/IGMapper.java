@@ -1,4 +1,4 @@
-package edu.gatech.VRDR.mapper;
+package edu.gatech.common.mapper;
 
 import edu.gatech.IGCompass.exception.MissingDataNodeException;
 import edu.gatech.IGCompass.exception.MissingInformationException;

@@ -8,6 +8,8 @@ import edu.gatech.IGCompass.exception.PathFormatException;
 import edu.gatech.IGCompass.exception.WrongTypeException;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.MannerOfDeath;
+import edu.gatech.common.mapper.CodeableConceptMapper;
+import edu.gatech.common.mapper.IGMapper;
 
 public class MannerOfDeathMapper implements IGMapper<MannerOfDeath> {
 

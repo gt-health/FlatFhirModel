@@ -57,7 +57,7 @@ public class Profiles implements Serializable{
 				profilesObject.getEntries().put(key, profileEntry);
 			}
 			else {
-				throw new WrongTypeException("profiles",value.getNodeType().toString(),"ObjectNode","ArrayNode");
+				throw new WrongTypeException(key,value.getNodeType().toString(),"ObjectNode","ArrayNode");
 			}
 		}
 		return profilesObject;

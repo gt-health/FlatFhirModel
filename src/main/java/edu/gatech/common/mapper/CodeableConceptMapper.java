@@ -1,4 +1,4 @@
-package edu.gatech.VRDR.mapper;
+package edu.gatech.common.mapper;
 
 import org.hl7.fhir.dstu3.model.CodeableConcept;
 
@@ -21,10 +21,10 @@ public class CodeableConceptMapper implements IGMapper<CodeableConcept>{
 		valueCodingLocalValue = CommonUtil.findValueFromIGKey(document,valueCodingRootPath);
 		codingText = CommonUtil.findValueFromIGKey(document,textRootPath);
 		if(codingLocalValue != null) {
-			rootCodeValue = document.getCodeableConcept(codingRootPath, codingLocalValue);
+			rootCodeValue = document.getTranslatedLocalDef(codingRootPath, codingLocalValue);
 		}
 		else if(valueCodingLocalValue != null) {
-			rootCodeValue = document.getCodeableConcept(valueCodingRootPath, valueCodingLocalValue);
+			rootCodeValue = document.getTranslatedLocalDef(valueCodingRootPath, valueCodingLocalValue);
 		}
 		if(rootCodeValue != null) {
 			return rootCodeValue;

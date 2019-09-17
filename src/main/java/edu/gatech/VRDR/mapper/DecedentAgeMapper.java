@@ -7,6 +7,7 @@ import edu.gatech.IGCompass.exception.MissingInformationException;
 import edu.gatech.IGCompass.mapper.util.CommonUtil;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.DecedentAge;
+import edu.gatech.common.mapper.IGMapper;
 
 public class DecedentAgeMapper implements IGMapper<DecedentAge>{
 	

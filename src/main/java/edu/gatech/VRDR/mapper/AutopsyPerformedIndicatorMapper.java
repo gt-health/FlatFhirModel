@@ -7,6 +7,8 @@ import edu.gatech.IGCompass.exception.PathFormatException;
 import edu.gatech.IGCompass.exception.WrongTypeException;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.AutopsyPerformedIndicator;
+import edu.gatech.common.mapper.CodeableConceptMapper;
+import edu.gatech.common.mapper.IGMapper;
 
 public class AutopsyPerformedIndicatorMapper implements IGMapper<AutopsyPerformedIndicator> {
 

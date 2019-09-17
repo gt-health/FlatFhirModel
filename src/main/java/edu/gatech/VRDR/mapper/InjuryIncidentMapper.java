@@ -11,6 +11,8 @@ import edu.gatech.IGCompass.exception.WrongTypeException;
 import edu.gatech.IGCompass.mapper.util.CommonUtil;
 import edu.gatech.IGCompass.model.IGMapDocument;
 import edu.gatech.VRDR.model.InjuryIncident;
+import edu.gatech.common.mapper.CodeableConceptMapper;
+import edu.gatech.common.mapper.IGMapper;
 
 public class InjuryIncidentMapper implements IGMapper<InjuryIncident> {
 

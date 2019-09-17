@@ -1,4 +1,4 @@
-package edu.gatech.VRDR.mapper;
+package edu.gatech.common.mapper;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class HumanNameMapper implements IGMapper<HumanName>{
 		prefix = CommonUtil.findListFromIGKey(document,resourceRootPath+".prefix");
 		suffix = CommonUtil.findListFromIGKey(document,resourceRootPath+".suffix");
 		if(use != null) {
-			humanName.setUse(NameUse.valueOf(use));
+			humanName.setUse(NameUse.fromCode(use));
 		}
 		if(text != null) {
 			humanName.setText(text);

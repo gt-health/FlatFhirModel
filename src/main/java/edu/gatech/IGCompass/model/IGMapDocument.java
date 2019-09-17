@@ -77,7 +77,8 @@ public class IGMapDocument implements Serializable{
 		if(!data.isValueNode()) {
 			throw new WrongTypeException(local_def,data.getNodeType().toString(),"JacksonValueNode");
 		}
-		return data.asText();
+		String translatedValue = profileEntry.getTranslatedValues().get(data.asText());
+		return translatedValue != null ? translatedValue : data.asText();
 	}
 	
 	public List<String> findListFromIGKey(String resourcePath) throws WrongTypeException, MissingDataNodeException, PathFormatException, MissingKeyException{
@@ -109,7 +110,7 @@ public class IGMapDocument implements Serializable{
 		return returnList;
 	}
 	
-	public CodeableConcept getCodeableConcept(String resourcePath,String localValue) {
+	public CodeableConcept getTranslatedLocalDef(String resourcePath,String localValue) {
 		ProfileEntry profileEntry = profiles.findEntryFromPath(resourcePath);
 		return profileEntry.getConceptMap().get(localValue);
 	}

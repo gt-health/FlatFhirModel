@@ -18,12 +18,14 @@ import edu.gatech.IGCompass.exception.WrongTypeException;
 public class ProfileEntry implements Serializable{
 	protected String name;
 	protected String local_def;
+	protected Map<String,String> translatedValues;
 	protected Map<String,CodeableConcept> conceptMap;
 	protected Map<String,ProfileEntry> childMap;
 	
 	public ProfileEntry() {
 		name = "";
 		local_def = "";
+		translatedValues = new HashMap<String,String>();
 		conceptMap = new HashMap<String,CodeableConcept>();
 		childMap = new HashMap<String,ProfileEntry>();
 	}
@@ -51,6 +53,14 @@ public class ProfileEntry implements Serializable{
 	public void setConceptMap(Map<String, CodeableConcept> conceptMap) {
 		this.conceptMap = conceptMap;
 	}
+
+	public Map<String, String> getTranslatedValues() {
+		return translatedValues;
+	}
+
+	public void setTranslatedValues(Map<String, String> translatedValues) {
+		this.translatedValues = translatedValues;
+	}
 	
 	public Map<String, ProfileEntry> getChildMap() {
 		return childMap;
@@ -59,12 +69,13 @@ public class ProfileEntry implements Serializable{
 	public void setChildMap(Map<String, ProfileEntry> childMap) {
 		this.childMap = childMap;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "ProfileEntry [name=" + name + ", local_def=" + local_def + ", conceptMap=" + conceptMap + "]";
+		return "ProfileEntry [name=" + name + ", local_def=" + local_def + ", translatedValues=" + translatedValues
+				+ ", childMap=" + childMap + "]";
 	}
-	
+
 	public ProfileEntry findEntryFromPath(String path) {
 		if(name.equalsIgnoreCase(path)) {
 			return this;
@@ -123,6 +134,9 @@ public class ProfileEntry implements Serializable{
 			else if(value.isArray()) {
 				ListProfileEntry childListProfileEntry = ListProfileEntry.parseFromJson((ArrayNode)value, path+"."+key);
 				profileEntryObject.getChildMap().put(key, childListProfileEntry);
+			}
+			else if(value.isTextual()) {
+				profileEntryObject.getTranslatedValues().put(key,value.asText());
 			}
 		}
 		if(profileEntryObject.getChildMap().size() == 0 && profileEntryObject.getLocal_def().isEmpty()) {
