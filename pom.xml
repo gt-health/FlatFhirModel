@@ -6,7 +6,7 @@
   <name>IGCompassModel</name>
   <description>Modelling package to work against a FlatFhir format, with a utility mapper package to map VRDR IG resources</description>
   <properties>
-  	<jackson.version>2.10.0.pr2</jackson.version>
+  	<jackson.version>2.12.6.1</jackson.version>
   	<hapifhir.version>3.8.0</hapifhir.version>
   	<maven.compiler.source>1.8</maven.compiler.source>
   	<maven.compiler.target>1.8</maven.compiler.target>
